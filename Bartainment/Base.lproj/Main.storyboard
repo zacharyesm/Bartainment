@@ -21,6 +21,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ddw-3v-Pld">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVO-C6-WSO">
+                                <rect key="frame" x="336" y="76" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="getCurrentPlace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pq5-xc-uBK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -28,6 +35,8 @@
                             <constraint firstItem="Ddw-3v-Pld" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8gm-V6-Mte"/>
                             <constraint firstItem="Ddw-3v-Pld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BSR-XR-yEB"/>
                             <constraint firstItem="Ddw-3v-Pld" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MEH-B7-d4R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aVO-C6-WSO" secondAttribute="trailing" constant="32" id="lr0-1j-Ndk"/>
+                            <constraint firstItem="aVO-C6-WSO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="qGN-4D-W15"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
