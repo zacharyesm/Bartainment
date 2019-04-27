@@ -58,6 +58,7 @@
 		738A7F452274A46C00263DB6 /* Bartainment */ = {
 			isa = PBXGroup;
 			children = (
+				738A7F5F2274AE2800263DB6 /* View */,
 				738A7F462274A46C00263DB6 /* AppDelegate.swift */,
 				738A7F582274A60800263DB6 /* Controller */,
 				738A7F4A2274A46C00263DB6 /* Main.storyboard */,
@@ -76,6 +77,13 @@
 				738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		738A7F5F2274AE2800263DB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
