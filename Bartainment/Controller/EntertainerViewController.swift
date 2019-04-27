@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EntertainerViewController.swift
 //  Bartainment
 //
 //  Created by Zack Esm on 4/27/19.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EntertainerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        view.backgroundColor = .green
     }
 
-
 }
-
