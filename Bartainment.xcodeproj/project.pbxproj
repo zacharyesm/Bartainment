@@ -16,6 +16,8 @@
 		738A7F5E2274A68500263DB6 /* EntertainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */; };
 		79567741058D8333208A37AC /* Pods_Bartainment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0102DE571B67989023D7B47C /* Pods_Bartainment.framework */; };
 		EF699B852274C86F007108DA /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF699B842274C86F007108DA /* Bar.swift */; };
+		738A7F612274BCBB00263DB6 /* PostJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F602274BCBB00263DB6 /* PostJobVC.swift */; };
+		738A7F632274CFF600263DB6 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F622274CFF600263DB6 /* DateCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		738A7F5B2274A67700263DB6 /* BarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
 		738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainerViewController.swift; sourceTree = "<group>"; };
 		EF699B842274C86F007108DA /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
+		738A7F602274BCBB00263DB6 /* PostJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJobVC.swift; sourceTree = "<group>"; };
+		738A7F622274CFF600263DB6 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				EF699B832274C845007108DA /* Model */,
 				738A7F5F2274AE2800263DB6 /* View */,
 				738A7F462274A46C00263DB6 /* AppDelegate.swift */,
+				738A7F5F2274AE2800263DB6 /* View */,
 				738A7F582274A60800263DB6 /* Controller */,
 				738A7F4A2274A46C00263DB6 /* Main.storyboard */,
 				738A7F4D2274A46F00263DB6 /* Assets.xcassets */,
@@ -85,6 +90,7 @@
 				738A7F592274A62A00263DB6 /* TabBarController.swift */,
 				738A7F5B2274A67700263DB6 /* BarViewController.swift */,
 				738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */,
+				738A7F602274BCBB00263DB6 /* PostJobVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +98,7 @@
 		738A7F5F2274AE2800263DB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				738A7F622274CFF600263DB6 /* DateCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF699B852274C86F007108DA /* Bar.swift in Sources */,
+				738A7F612274BCBB00263DB6 /* PostJobVC.swift in Sources */,
+				738A7F632274CFF600263DB6 /* DateCell.swift in Sources */,
 				738A7F5A2274A62A00263DB6 /* TabBarController.swift in Sources */,
 				738A7F5E2274A68500263DB6 /* EntertainerViewController.swift in Sources */,
 				738A7F5C2274A67700263DB6 /* BarViewController.swift in Sources */,

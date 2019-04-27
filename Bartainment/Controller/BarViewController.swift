@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class BarViewController: UIViewController {
     
@@ -59,9 +60,8 @@ extension BarViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(seekingJobs[indexPath.row])
-//        let vc = EntertainerViewController()
-//        navigationController?.pushViewController(vc, animated: true)
+        let viewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostJobVC")
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 }
