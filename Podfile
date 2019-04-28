@@ -9,4 +9,6 @@ target 'Bartainment' do
   # Pods for Bartainment
   pod 'GooglePlaces'
   pod 'GoogleMaps'
+  
+  pod 'SDWebImage', '~> 4.0'
 end
