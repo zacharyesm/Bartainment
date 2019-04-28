@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D06A690227542E400914D89 /* GigsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D06A68F227542E400914D89 /* GigsTableVC.swift */; };
 		731B48162275443100EA468C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 731B48152275443100EA468C /* GoogleService-Info.plist */; };
+		7361A4DA227551F30005551D /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7361A4D9227551F30005551D /* Job.swift */; };
 		738A7F472274A46C00263DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F462274A46C00263DB6 /* AppDelegate.swift */; };
 		738A7F4C2274A46C00263DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738A7F4A2274A46C00263DB6 /* Main.storyboard */; };
 		738A7F4E2274A46F00263DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738A7F4D2274A46F00263DB6 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		3BCFEEF1C089163972B99F11 /* Pods-Bartainment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bartainment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment.debug.xcconfig"; sourceTree = "<group>"; };
 		48B9CA239BA55DCE5B38D589 /* Pods-Bartainment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bartainment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment.release.xcconfig"; sourceTree = "<group>"; };
 		731B48152275443100EA468C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7361A4D9227551F30005551D /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		738A7F432274A46C00263DB6 /* Bartainment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bartainment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		738A7F462274A46C00263DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		738A7F4B2274A46C00263DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				EF699B832274C845007108DA /* Model */,
-				738A7F462274A46C00263DB6 /* AppDelegate.swift */,
 				738A7F5F2274AE2800263DB6 /* View */,
 				738A7F582274A60800263DB6 /* Controller */,
 				739E9028227531B00028E74A /* FirebaseService.swift */,
@@ -133,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				EF699B842274C86F007108DA /* Bar.swift */,
+				7361A4D9227551F30005551D /* Job.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,7 +218,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bartainment/Pods-Bartainment-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -229,7 +231,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bartainment/Pods-Bartainment-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D2725C9292190155589D972F /* [CP] Check Pods Manifest.lock */ = {
@@ -262,7 +264,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Bartainment/Pods-Bartainment-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -279,7 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bartainment/Pods-Bartainment-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -298,6 +300,7 @@
 				738A7F472274A46C00263DB6 /* AppDelegate.swift in Sources */,
 				738A7F672274E7D600263DB6 /* EntertainerTypeCell.swift in Sources */,
 				0D06A690227542E400914D89 /* GigsTableVC.swift in Sources */,
+				7361A4DA227551F30005551D /* Job.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
