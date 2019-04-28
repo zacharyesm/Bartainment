@@ -12,10 +12,11 @@
 		738A7F4E2274A46F00263DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738A7F4D2274A46F00263DB6 /* Assets.xcassets */; };
 		738A7F512274A46F00263DB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738A7F4F2274A46F00263DB6 /* LaunchScreen.storyboard */; };
 		738A7F5A2274A62A00263DB6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F592274A62A00263DB6 /* TabBarController.swift */; };
-		738A7F5C2274A67700263DB6 /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F5B2274A67700263DB6 /* BarViewController.swift */; };
 		738A7F5E2274A68500263DB6 /* EntertainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */; };
-		738A7F612274BCBB00263DB6 /* PostJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F602274BCBB00263DB6 /* PostJobVC.swift */; };
+		738A7F612274BCBB00263DB6 /* BarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F602274BCBB00263DB6 /* BarVC.swift */; };
 		738A7F632274CFF600263DB6 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F622274CFF600263DB6 /* DateCell.swift */; };
+		738A7F652274DD0C00263DB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 738A7F642274DD0C00263DB6 /* GoogleService-Info.plist */; };
+		738A7F672274E7D600263DB6 /* EntertainerTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F662274E7D600263DB6 /* EntertainerTypeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +27,11 @@
 		738A7F502274A46F00263DB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		738A7F522274A46F00263DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		738A7F592274A62A00263DB6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		738A7F5B2274A67700263DB6 /* BarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
 		738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainerViewController.swift; sourceTree = "<group>"; };
-		738A7F602274BCBB00263DB6 /* PostJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostJobVC.swift; sourceTree = "<group>"; };
+		738A7F602274BCBB00263DB6 /* BarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarVC.swift; sourceTree = "<group>"; };
 		738A7F622274CFF600263DB6 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		738A7F642274DD0C00263DB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		738A7F662274E7D600263DB6 /* EntertainerTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainerTypeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				738A7F4D2274A46F00263DB6 /* Assets.xcassets */,
 				738A7F4F2274A46F00263DB6 /* LaunchScreen.storyboard */,
 				738A7F522274A46F00263DB6 /* Info.plist */,
+				738A7F642274DD0C00263DB6 /* GoogleService-Info.plist */,
 			);
 			path = Bartainment;
 			sourceTree = "<group>";
@@ -77,9 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				738A7F592274A62A00263DB6 /* TabBarController.swift */,
-				738A7F5B2274A67700263DB6 /* BarViewController.swift */,
+				738A7F602274BCBB00263DB6 /* BarVC.swift */,
 				738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */,
-				738A7F602274BCBB00263DB6 /* PostJobVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				738A7F622274CFF600263DB6 /* DateCell.swift */,
+				738A7F662274E7D600263DB6 /* EntertainerTypeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				738A7F512274A46F00263DB6 /* LaunchScreen.storyboard in Resources */,
+				738A7F652274DD0C00263DB6 /* GoogleService-Info.plist in Resources */,
 				738A7F4E2274A46F00263DB6 /* Assets.xcassets in Resources */,
 				738A7F4C2274A46C00263DB6 /* Main.storyboard in Resources */,
 			);
@@ -163,12 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				738A7F612274BCBB00263DB6 /* PostJobVC.swift in Sources */,
+				738A7F612274BCBB00263DB6 /* BarVC.swift in Sources */,
 				738A7F632274CFF600263DB6 /* DateCell.swift in Sources */,
 				738A7F5A2274A62A00263DB6 /* TabBarController.swift in Sources */,
 				738A7F5E2274A68500263DB6 /* EntertainerViewController.swift in Sources */,
-				738A7F5C2274A67700263DB6 /* BarViewController.swift in Sources */,
 				738A7F472274A46C00263DB6 /* AppDelegate.swift in Sources */,
+				738A7F672274E7D600263DB6 /* EntertainerTypeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

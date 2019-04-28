@@ -12,8 +12,10 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let barViewController: UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BarVC")
 
-        let barVC = UINavigationController(rootViewController: BarViewController())
+        let barVC = UINavigationController(rootViewController: barViewController)
         barVC.tabBarItem = UITabBarItem(title: "Bar", image: nil, tag: 0)
         
         let entertainerVC = UINavigationController(rootViewController: EntertainerViewController())
