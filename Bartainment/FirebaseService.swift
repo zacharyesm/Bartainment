@@ -14,11 +14,13 @@ class FirebaseService {
     
     let jobs = Database.database().reference().child("jobs")
     
-    func postJob(jobType: String, budget: Int, date: String, time: String) {
+    func postJob(jobType: String, budget: Int, date: String, time: String, jobTitle: String) {
         let postDict: [String: Any] = [
             "jobType": jobType,
             "budget": budget,
             "date": date,
+            "jobTitle": jobTitle,
+            "barName": "Hair of the Dog",
             "time": time
         ]
         
@@ -41,9 +43,11 @@ class FirebaseService {
                     guard let type = dict["jobType"] as? String,
                         let budget = dict["budget"] as? Int,
                         let date = dict["date"] as? String,
+                        let jobTitle = dict["jobTitle"] as? String,
+                        let barName = dict["barName"] as? String,
                         let time = dict["time"] as? String else { continue }
                     
-                    let job = Job(key: jobKey, type: type, budget: budget, date: date, time: time)
+                    let job = Job(key: jobKey, type: type, budget: budget, date: date, jobTitle: jobTitle, barName: barName,  time: time)
                     jobs.append(job)
                 }
                 

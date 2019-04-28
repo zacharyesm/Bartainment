@@ -13,13 +13,17 @@ class Job {
     let type: String
     let budget: Int
     let date: String
+    let jobTitle: String
+    let barName: String
     let time: String
     
-    init(key: String, type: String, budget: Int, date: String, time: String) {
+    init(key: String, type: String, budget: Int, date: String, jobTitle: String, barName: String , time: String) {
         self.key = key
         self.type = type
         self.budget = budget
         self.date = date
+        self.jobTitle = jobTitle
+        self.barName = barName
         self.time = time
     }
 }

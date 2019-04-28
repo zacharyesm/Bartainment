@@ -11,34 +11,29 @@ import UIKit
 import SDWebImage
 
 class GigsTableViewCell: UITableViewCell {
-//    @IBOutlet weak var profilePicture: UIImageView!
-//    @IBOutlet weak var profileName: UILabel!
-//    @IBOutlet weak var tweetLabel: UILabel!
-//    @IBOutlet weak var tweetTitle: UILabel!
     @IBOutlet weak var barImage: UIImageView!
     @IBOutlet weak var gigPostTitle: UILabel!
     @IBOutlet weak var barName: UILabel!
     @IBOutlet weak var gigDesc: UILabel!
+    @IBOutlet weak var jobTime: UILabel!
+    @IBOutlet weak var jobType: UILabel!
 }
 
 class GigsTableVC: UITableViewController {
-    var gigPostsList: [String] = []
-
-//    var teamSocialList: [TeamSocial] = []
-//    var team: Team?
+    var gigPostsList: [Job] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-//        let tbvc = self.tabBarController  as! TeamInfoTBC
-//        team = tbvc.team
-//
-//        let ruwt = RuwtRestClient()
-//        ruwt.getTeamSocial(completion: {tms in
-//            self.teamSocialList = tms!
-//            self.tableView.reloadData()
-//            print(tms![5].name)
-//        }, teamId: String(team!.teamID))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let fbs = FirebaseService()
+        fbs.getJobs(completion: {jobs in
+            self.gigPostsList = jobs
+            self.tableView.reloadData()
+        })
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,39 +43,44 @@ class GigsTableVC: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-//        switch(segue.identifier ?? "") {
-//        case "ShowSocialWeb":
-//            print("inside ShowSocialWebSegue")
-//            let webViewVC : WebViewVC = segue.destination as! WebViewVC;
-//
-//            guard let selectedSocialCell = sender as? TeamSocialTableViewCell else {
-//                fatalError("Unexpected sender: \(sender)")
-//            }
-//
-//            guard let indexPath = tableView.indexPath(for: selectedSocialCell) else {
-//                fatalError("The selected cell is not being displayed by the table")
-//            }
-//
-//            let selectedSocial = teamSocialList[indexPath.row]
-//            webViewVC.sourceVc = WebViewSource.social
-//            webViewVC.teamSocial = selectedSocial
-//
-//        default:
-//            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
-//        }
+        switch(segue.identifier ?? "") {
+        case "ShowJobPost":
+            let jobPostingVC : JobPostingVC = segue.destination as! JobPostingVC;
+
+            guard let selectedJobCell = sender as? GigsTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+
+            guard let indexPath = tableView.indexPath(for: selectedJobCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+
+            let selectedJob = gigPostsList[indexPath.row]
+            jobPostingVC.jobPost = selectedJob
+
+        default:
+            fatalError("Unexpected Segue Identifier; \(String(describing: segue.identifier))")
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GigPostCell", for: indexPath) as! GigsTableViewCell
         
-//        let socialTweet = teamSocialList[indexPath.row]
-//        cell.profileName?.text = socialTweet.name
-//        cell.tweetLabel?.text = " "+socialTweet.label
-//        cell.tweetTitle?.text = socialTweet.title
-//
+        let gigPost = gigPostsList[indexPath.row]
+        cell.gigPostTitle?.text = gigPost.jobTitle
+        cell.barName?.text = " "+gigPost.barName
+        cell.jobTime?.text = " "+gigPost.date+" - "+gigPost.time
+        cell.jobType?.text = " "+gigPost.type
+        cell.gigDesc?.text = " $"+String(gigPost.budget)
+        cell.barImage?.image = UIImage(named: "hairofthedog")
+
 //        cell.profilePicture?.sd_setImage(with: URL(string: socialTweet.assetURLs.profileImage), placeholderImage: UIImage(named: "7073"))
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 130
     }
 }
 

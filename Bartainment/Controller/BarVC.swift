@@ -13,6 +13,7 @@ class BarVC: UIViewController {
     let entertainmentTypes = ["Singer", "Live Band", "DJ", "Comedian"]
     var selectedJobType: String?
     
+    @IBOutlet weak var jobTitleTF: UITextField!
     @IBOutlet weak var entertainerTypeContainer: UIView!
     lazy var entertainerTypeCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -67,7 +68,7 @@ class BarVC: UIViewController {
         let endTime = selectedEndTime else { return }
         
         let time = "\(startTime)-\(endTime)"
-        FirebaseService.service.postJob(jobType: jobType, budget: Int(budgetSlider.value), date: date, time: time)
+        FirebaseService.service.postJob(jobType: jobType, budget: Int(budgetSlider.value), date: date, time: time, jobTitle: jobTitleTF.text ?? "")
     }
     
     override func viewDidLoad() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D06A690227542E400914D89 /* GigsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D06A68F227542E400914D89 /* GigsTableVC.swift */; };
+		0D06A69222757D8200914D89 /* JobPostingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D06A69122757D8200914D89 /* JobPostingVC.swift */; };
 		731B48162275443100EA468C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 731B48152275443100EA468C /* GoogleService-Info.plist */; };
 		7361A4DA227551F30005551D /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7361A4D9227551F30005551D /* Job.swift */; };
 		738A7F472274A46C00263DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738A7F462274A46C00263DB6 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0102DE571B67989023D7B47C /* Pods_Bartainment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bartainment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D06A68F227542E400914D89 /* GigsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigsTableVC.swift; sourceTree = "<group>"; };
+		0D06A69122757D8200914D89 /* JobPostingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobPostingVC.swift; sourceTree = "<group>"; };
 		3BCFEEF1C089163972B99F11 /* Pods-Bartainment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bartainment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment.debug.xcconfig"; sourceTree = "<group>"; };
 		48B9CA239BA55DCE5B38D589 /* Pods-Bartainment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bartainment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bartainment/Pods-Bartainment.release.xcconfig"; sourceTree = "<group>"; };
 		731B48152275443100EA468C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				738A7F602274BCBB00263DB6 /* BarVC.swift */,
 				738A7F5D2274A68500263DB6 /* EntertainerViewController.swift */,
 				0D06A68F227542E400914D89 /* GigsTableVC.swift */,
+				0D06A69122757D8200914D89 /* JobPostingVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				EF699B852274C86F007108DA /* Bar.swift in Sources */,
 				739E9029227531B00028E74A /* FirebaseService.swift in Sources */,
 				738A7F632274CFF600263DB6 /* DateCell.swift in Sources */,
+				0D06A69222757D8200914D89 /* JobPostingVC.swift in Sources */,
 				738A7F5A2274A62A00263DB6 /* TabBarController.swift in Sources */,
 				738A7F5E2274A68500263DB6 /* EntertainerViewController.swift in Sources */,
 				738A7F472274A46C00263DB6 /* AppDelegate.swift in Sources */,
