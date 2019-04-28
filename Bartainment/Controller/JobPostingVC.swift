@@ -31,7 +31,9 @@ class JobPostingVC: UIViewController {
     @IBAction func applyBtn(_ sender: Any) {
         let alertController = UIAlertController(title: "Job Applied To", message:
             "You applied to this job.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }))
         
         self.present(alertController, animated: true, completion: nil)
     }
@@ -46,7 +48,7 @@ class JobPostingVC: UIViewController {
         jobTime?.text = " "+jobPost!.date+" - "+jobPost!.time
         jobType?.text = " "+jobPost!.type
         jobBudget?.text = " $"+String(jobPost!.budget)
-        barImage?.image = UIImage(named: "hairofthedog")
+        barImage?.image = UIImage(named: (jobPost?.barImage)!)
         
     }
     

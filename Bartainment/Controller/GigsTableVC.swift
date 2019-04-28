@@ -72,7 +72,7 @@ class GigsTableVC: UITableViewController {
         cell.jobTime?.text = " "+gigPost.date+" - "+gigPost.time
         cell.jobType?.text = " "+gigPost.type
         cell.gigDesc?.text = " $"+String(gigPost.budget)
-        cell.barImage?.image = UIImage(named: "hairofthedog")
+        cell.barImage?.image = UIImage(named: gigPost.barImage)
 
 //        cell.profilePicture?.sd_setImage(with: URL(string: socialTweet.assetURLs.profileImage), placeholderImage: UIImage(named: "7073"))
         

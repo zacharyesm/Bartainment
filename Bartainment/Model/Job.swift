@@ -15,15 +15,17 @@ class Job {
     let date: String
     let jobTitle: String
     let barName: String
+    let barImage: String
     let time: String
     
-    init(key: String, type: String, budget: Int, date: String, jobTitle: String, barName: String , time: String) {
+    init(key: String, type: String, budget: Int, date: String, jobTitle: String, barName: String, barImage: String , time: String) {
         self.key = key
         self.type = type
         self.budget = budget
         self.date = date
         self.jobTitle = jobTitle
         self.barName = barName
+        self.barImage = barImage
         self.time = time
     }
 }
