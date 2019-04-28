@@ -11,4 +11,7 @@ target 'Bartainment' do
   pod 'GoogleMaps'
   
   pod 'SDWebImage', '~> 4.0'
+
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 end

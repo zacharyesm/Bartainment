@@ -11,6 +11,7 @@ import UIKit
 class BarVC: UIViewController {
     
     let entertainmentTypes = ["Singer", "Live Band", "DJ", "Comedian"]
+    var selectedJobType: String?
     
     @IBOutlet weak var entertainerTypeContainer: UIView!
     lazy var entertainerTypeCollectionView: UICollectionView = {
@@ -28,6 +29,7 @@ class BarVC: UIViewController {
     }()
     
     @IBOutlet weak var budgetValue: UILabel!
+    @IBOutlet weak var budgetSlider: UISlider!
     @IBAction func budgetSliderValueChange(_ sender: Any) {
         guard let slider = sender as? UISlider else { return }
         budgetValue.text = "$\(Int(slider.value))"
@@ -47,15 +49,25 @@ class BarVC: UIViewController {
         
         return cv
     }()
+    let dates = ["4/28", "4/29", "4/30", "5/1", "5/2", "5/3", "5/4"]
+    var selectedDate: String?
     
     @IBOutlet weak var startTimePicker: UIPickerView!
+    var selectedStartTime: String?
     @IBOutlet weak var endTimePicker: UIPickerView!
+    var selectedEndTime: String?
     
-    let startTimes = ["6 PM", "7 PM", "8 PM", "9 PM", "10 PM", "11 PM", "12 AM"]
-    let endTimes = ["8 PM", "9 PM", "10 PM", "11 PM", "12 AM", "1 AM", "2 AM"]
+    let startTimes = ["6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"]
+    let endTimes = ["8PM", "9PM", "10PM", "11PM", "12AM", "1AM", "2AM"]
     
     @IBAction func submitJob(_ sender: Any) {
+        guard let jobType = selectedJobType,
+        let date = selectedDate,
+        let startTime = selectedStartTime,
+        let endTime = selectedEndTime else { return }
         
+        let time = "\(startTime)-\(endTime)"
+        FirebaseService.service.postJob(jobType: jobType, budget: Int(budgetSlider.value), date: date, time: time)
     }
     
     override func viewDidLoad() {
@@ -86,6 +98,9 @@ class BarVC: UIViewController {
         
         endTimePicker.delegate = self
         endTimePicker.dataSource = self
+        
+        selectedStartTime = startTimes[0]
+        selectedEndTime = endTimes[0]
     }
 
 }
@@ -116,6 +131,14 @@ extension BarVC: UIPickerViewDelegate, UIPickerViewDataSource {
         return nil
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == startTimePicker {
+            selectedStartTime = startTimes[row]
+        } else if pickerView == endTimePicker {
+            selectedEndTime = endTimes[row]
+        }
+    }
+    
 }
 
 extension BarVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -126,6 +149,7 @@ extension BarVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollect
             cell.entertainerType = entertainmentTypes[indexPath.row]
             return cell
         } else if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DateCell", for: indexPath) as? DateCell {
+            cell.date = dates[indexPath.row]
             return cell
         }
         
@@ -133,7 +157,11 @@ extension BarVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("SELECTED")
+        if collectionView == entertainerTypeCollectionView {
+            selectedJobType = entertainmentTypes[indexPath.row]
+        } else {
+            selectedDate = dates[indexPath.row]
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

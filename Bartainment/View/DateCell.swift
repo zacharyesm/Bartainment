@@ -10,6 +10,12 @@ import UIKit
 
 class DateCell: UICollectionViewCell {
     
+    var date: String! {
+        didSet {
+            label.text = date
+        }
+    }
+    
     let label: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -35,13 +41,6 @@ class DateCell: UICollectionViewCell {
             label.trailingAnchor.constraint(equalTo: trailingAnchor),
             label.heightAnchor.constraint(equalToConstant: 35)
             ])
-        
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MM/dd"
-        let date = Date()
-        
-        let string = dateFormatterPrint.string(from: date)
-        label.text = string
     }
     
     required init?(coder aDecoder: NSCoder) {

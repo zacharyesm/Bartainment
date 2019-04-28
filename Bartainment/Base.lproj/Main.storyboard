@@ -187,6 +187,7 @@
                         <viewLayoutGuide key="safeArea" id="PfX-Ah-x9n"/>
                     </view>
                     <connections>
+                        <outlet property="budgetSlider" destination="IQ6-jS-Hol" id="BRp-di-U5T"/>
                         <outlet property="budgetValue" destination="kFc-px-rri" id="Tmf-aX-meB"/>
                         <outlet property="collectionViewContainer" destination="2jG-oE-tqf" id="Bwh-zh-wE3"/>
                         <outlet property="endTimePicker" destination="CyB-XI-5ZY" id="Ww0-IX-BSd"/>
