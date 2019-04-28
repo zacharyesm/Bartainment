@@ -69,12 +69,31 @@ class BarVC: UIViewController {
         
         let time = "\(startTime)-\(endTime)"
         FirebaseService.service.postJob(jobType: jobType, budget: Int(budgetSlider.value), date: date, time: time, jobTitle: jobTitleTF.text ?? "")
+        let alert = UIAlertController(title: nil, message: "Job Posted!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureView()
+        addJobsButton()
+    }
+    
+    fileprivate func addJobsButton() {
+        let button = UIButton(type: .custom)
+        button.setTitle("Proposals", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        button.addTarget(self, action: #selector(showJobs), for: .touchUpInside)
+        let item = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = item
+    }
+    
+    @objc func showJobs() {
+        let vc = SwipeVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     fileprivate func configureView() {
