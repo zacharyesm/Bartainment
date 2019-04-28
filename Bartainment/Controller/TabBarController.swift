@@ -18,7 +18,9 @@ class TabBarController: UITabBarController {
         let barVC = UINavigationController(rootViewController: barViewController)
         barVC.tabBarItem = UITabBarItem(title: "Bar", image: nil, tag: 0)
         
-        let entertainerVC = UINavigationController(rootViewController: EntertainerViewController())
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EntertainerViewController")
+        
+        let entertainerVC = UINavigationController(rootViewController: viewController)
         entertainerVC.tabBarItem = UITabBarItem(title: "Entertainer", image: nil, tag: 1)
         
         let viewControllerList = [barVC, entertainerVC]

@@ -1,6 +1,7 @@
 /Pods
 Bartainment.xcodeproj/project.xcworkspace/*
 Bartainment.xcworkspace/xcuserdata/*
+Bartainment.xcworkspace/
 
 #########################
 # .gitignore file for Xcode4 and Xcode5 Source projects

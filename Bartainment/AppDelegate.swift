@@ -6,6 +6,7 @@
 //  Copyright © 2019 HackFest. All rights reserved.
 //
 
+import GooglePlaces
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Google places
+        GMSPlacesClient.provideAPIKey("AIzaSyBZOYI29hJe2ezxDxhR0K_Pio0yxTDnmmE")
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let vc = TabBarController()
