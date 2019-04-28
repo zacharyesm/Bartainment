@@ -38,7 +38,7 @@ class CardView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .red
+        backgroundColor = .yellow
         clipsToBounds = true
         layer.cornerRadius = 10
         

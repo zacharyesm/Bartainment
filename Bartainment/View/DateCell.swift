@@ -29,10 +29,29 @@ class DateCell: UICollectionViewCell {
         setupView()
     }
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                label.textColor = UIColor.yellow
+                label.font = UIFont.boldSystemFont(ofSize: 16)
+                backgroundColor = .black
+                layer.borderColor = UIColor.yellow.cgColor
+                layer.borderWidth = 3
+            } else {
+                label.textColor = .black
+                label.font = UIFont.systemFont(ofSize: 16)
+                backgroundColor = .white
+                layer.borderColor = UIColor.black.cgColor
+                layer.borderWidth = 1
+            }
+        }
+    }
+    
     fileprivate func setupView() {
-        backgroundColor = .lightGray
+        backgroundColor = .white
         layer.borderColor = UIColor.black.cgColor
         layer.borderWidth = 1
+        layer.cornerRadius = 10
         
         addSubview(label)
         NSLayoutConstraint.activate([
