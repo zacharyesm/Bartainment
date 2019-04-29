@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // Google places
-        GMSPlacesClient.provideAPIKey("AIzaSyBZOYI29hJe2ezxDxhR0K_Pio0yxTDnmmE")
+        GMSPlacesClient.provideAPIKey("INSERT_API_KEY_HERE")
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let vc = TabBarController()
